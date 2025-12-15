@@ -1,3 +1,6 @@
+APPLICATION LINK : https://abinesh294.github.io/simple-animation/
+
+
 # Elevate Animation
 
 A clean SVG-based logo animation project that demonstrates advanced SVG techniques such as **custom paths**, **curved shapes**, **stroke drawing**, and **left-to-right fill reveal using masks**. The animation visually represents an *elevating* motion with a concave star, curved lines, and progressive fill.
