@@ -1,0 +1,148 @@
+body {
+  margin: 0;
+  height: 100vh;
+  background: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  width: 600px;
+  animation: moveUp 1.5s ease-in-out forwards;
+  animation-delay: 1.5s;
+}
+
+svg * {
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+
+
+
+#left-curve,
+#right-curve {
+  stroke-dasharray: 300;
+  stroke-dashoffset: 300;
+  animation: draw 2s ease forwards;
+}
+
+#top-line {
+    stroke-dasharray: 300;
+    stroke-dashoffset: 300;
+    animation: draw ease forwards;
+}
+
+
+#top-line {
+    animation-delay: 0.6s;
+}
+
+/* FILL */
+/* #fill-shape {
+  opacity: 0;
+  animation: fillIn 0.8s ease forwards;
+  animation-delay: 1.4s;
+} */
+
+/* TEXT */
+#text {
+  fill: white;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3.5rem;
+  letter-spacing: 10px;
+  opacity: 0;
+  animation: textIn 1s ease forwards;
+  animation-delay: 2s;
+}
+
+/* KEYFRAMES */
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes fillIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes starIn {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes textIn {
+  to {
+    opacity: 1;
+    letter-spacing: 16px;
+  }
+}
+
+/*----------------------------------------------------------------------- */
+
+.star-wrapper {
+  overflow: visible;
+}
+
+#star {
+  fill: white;
+  /* transform: scale(0.6); */
+
+  transform-box: fill-box;
+  transform-origin: 50% 50%;
+
+  animation: starMoveRotate 2s ease-out forwards;
+
+}
+
+@keyframes starMoveRotate {
+  0% {
+    transform: translateX(-160px) translateY(-60px) scale(0.2) rotate(0deg);
+    opacity: 0;
+  }
+
+  60% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateX(50px) translateY(0) scale(0.9) rotate(360deg);
+    opacity: 1;
+  }
+}
+
+@keyframes moveUp {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-40px);
+  }
+}
+
+#mask-rect {
+  animation: fillLeftToRight 2s ease-out forwards;
+  animation-delay: 0.5s;
+}
+
+@keyframes fillLeftToRight {
+  from {
+    width: 0;
+  }
+  to {
+    width: 300px; /* must cover full SVG width */
+  }
+}
+
+

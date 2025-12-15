@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Elevate Animation</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <svg
+      class="logo"
+      width="500"
+      height="400"
+      viewBox="0 0 300 400"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <!-- STAR -->
+      <!-- <path
+          d="
+                M100 20
+                C100 70 140 100 180 100
+                C130 110 110 110 100 180
+                C100 120 70 100 20 100
+                C70 90 90 70 100 20
+                Z
+              "
+          fill="white"
+        /> -->
+      <!-- <path
+        id="star"
+        d="M100 20
+            C100 70 140 100 180 100
+            C130 110 110 110 100 180
+            C100 120 70 100 20 100
+            C70 90 90 70 100 20
+            Z"
+        fill="white"
+      /> -->
+
+      <g transform="scale(0.8)">
+  <path
+    id="star"
+    d="M100 20
+       C100 70 140 100 180 100
+       C130 110 110 110 100 180
+       C100 120 70 100 20 100
+       C70 90 90 70 100 20
+       Z"
+    fill="white"
+  />
+</g>
+
+      
+
+      <!-- HORIZONTAL LINE y 150 to 170 -->
+      <line
+        id="top-line"
+        x1="50"
+        y1="170"  
+        x2="250"
+        y2="170"
+        stroke="white"
+        stroke-width="2"
+      />
+
+      <!-- LEFT CURVE -->
+     
+      <!-- <path
+  id="left-curve"
+  d="
+    M150 260
+    C140 220 110 150 50 150
+  "
+  stroke="white"
+  stroke-width="2"
+  fill="none"
+/> -->
+      <path
+  id="left-curve"
+  d="
+    M150 280
+    C140 220 110 170 50 170
+  "
+  stroke="white"
+  stroke-width="2"
+  fill="none"
+/>
+
+
+      <!-- RIGHT CURVE -->
+      <!-- <path
+        id="right-curve"
+        d="M230 150
+       C190 150 160 220 150 260"
+        stroke="white"
+        stroke-width="2"
+        fill="none"
+      /> -->
+      <path
+  id="right-curve"
+  d="
+    M150 280
+    C160 220 190 170 250 170
+  "
+  stroke="white"
+  stroke-width="2"
+  fill="none"
+/>
+
+
+      <!-- FILL SHAPE -->
+      <!-- <path
+        id="fill-shape"
+        d="M50 150
+       C110 150 140 220 150 260
+       C160 220 190 150 250 150
+       Z"
+        fill="white"
+      /> -->
+      <!-- MASK -->
+  <mask id="reveal-mask">
+    <!-- black = hidden -->
+    <rect x="0" y="0" width="300" height="400" fill="black" />
+
+    <!-- white = visible (animated) -->
+    <rect id="mask-rect" x="0" y="0" width="0" height="400" fill="white" />
+  </mask>
+      <path
+        id="fill-shape"
+        d="M50 170
+       C110 170 140 220 150 280
+       C160 220 190 170 250 170
+       Z"
+        fill="white"
+        mask="url(#reveal-mask)"
+      />
+
+      
+
+      <!-- TEXT -->
+      <text id="text" x="170" y="370" text-anchor="middle">E L E V A T E</text>
+    </svg>
+  </body>
+</html>
